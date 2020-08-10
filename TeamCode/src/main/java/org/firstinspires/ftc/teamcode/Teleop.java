@@ -5,13 +5,14 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 
 public class Teleop extends LinearOpMode {
     @Override
-    public void runOpMode() throws InterruptedException {
+    public void runOpMode() {
         DcMotor frontright = hardwareMap.dcMotor.get("front_right");
 
         waitForStart();
 
         while (opModeIsActive()){
             frontright.setPower(0);
+            break;
         }
     }
 }
